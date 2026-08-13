@@ -1,4 +1,4 @@
-# 🚴 AdventureWorks Exploratory Data Analysis (EDA) with SQL
+# AdventureWorks Exploratory Data Analysis (EDA) with SQL
 
 A comprehensive Data Analysis project performing Exploratory Data Analysis (EDA) on Microsoft's AdventureWorks relational database using SQL. This project focuses on evaluating overall sales performance, customer demographics, product category distribution, and purchasing trends over time.
 
@@ -82,6 +82,3 @@ select top 5
 from Sales.vSalesPerson
 order by SalesYTD desc;
 ```
----
-
-## 📁 Repository Structure
