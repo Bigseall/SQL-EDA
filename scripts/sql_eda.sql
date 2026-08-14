@@ -6,17 +6,17 @@
 -- ===================================================================
 -- SECTION 1: Database Exploration
 -- -------------------------------------------------------------------
-SELECT 
+select
     table_schema, 
     table_type, 
-    COUNT(*) AS total_tables
-FROM INFORMATION_SCHEMA.TABLES
-GROUP BY table_schema, table_type
-ORDER BY total_tables DESC;
+    count(*) as total_tables
+from INFORMATION_SCHEMA.TABLES
+group by table_schema, table_type
+order by total_tables desc;
 
-SELECT  * FROM INFORMATION_SCHEMA.TABLES
+select  * from INFORMATION_SCHEMA.TABLES
 where TABLE_SCHEMA = 'Sales'
-SELECT  * FROM INFORMATION_SCHEMA.TABLES
+select  * from INFORMATION_SCHEMA.TABLES
 where TABLE_SCHEMA = 'Production'
 
 -- -------------------------------------------------------------------
