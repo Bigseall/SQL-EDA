@@ -62,10 +62,11 @@ select sc.CustomerID,pp.FirstName,pp.LastName,sum(sh.Subtotal) as Total_revenue
 from Person.Person as pp
 left join Sales.Customer sc
 ON sc.PersonID = pp.BusinessEntityID
-left join Sales.SalesOrderHeader as sh
+inner join Sales.SalesOrderHeader as sh
 on sc.CustomerID = sh.CustomerID
 group by sc.CustomerID,pp.FirstName,pp.LastName
 order by sum(sh.Subtotal) desc
+
 
 -- -------------------------------------------------------------------
 -- SECTION 4: Product & Category Performance
