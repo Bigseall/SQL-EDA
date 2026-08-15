@@ -57,13 +57,14 @@ group by case
 			else st.Name end
 order by count(sc.CustomerID) desc
 
---Find the total revenue by each customer
+--Find the total revenue by each customer (only B2C)
 select sc.CustomerID,pp.FirstName,pp.LastName,sum(sh.Subtotal) as Total_revenue
 from Person.Person as pp
 left join Sales.Customer sc
 ON sc.PersonID = pp.BusinessEntityID
 inner join Sales.SalesOrderHeader as sh
 on sc.CustomerID = sh.CustomerID
+where sc.StoreID is null
 group by sc.CustomerID,pp.FirstName,pp.LastName
 order by sum(sh.Subtotal) desc
 
